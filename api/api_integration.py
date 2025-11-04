@@ -1,7 +1,4 @@
-
 #  AI-Driven Smart City Management System – Unified API
-
-
 
 from fastapi import FastAPI, UploadFile, File
 from pydantic import BaseModel
@@ -22,10 +19,10 @@ def load_model_safe(path):
     """Safely load model, return None if unavailable"""
     try:
         model = joblib.load(path)
-        print(f"✅ Loaded: {os.path.basename(path)}")
+        print(f" Loaded: {os.path.basename(path)}")
         return model
     except Exception as e:
-        print(f"⚠️ Could not load {os.path.basename(path)}: {e}")
+        print(f" Could not load {os.path.basename(path)}: {e}")
         return None
 
 traffic_model = load_model_safe(os.path.join(BASE_PATH, "traffic_model.pkl"))
@@ -38,18 +35,18 @@ cnn_model = None
 if os.path.exists(cnn_model_path):
     try:
         cnn_model = load_model(cnn_model_path)
-        print("✅ Loaded CNN Accident Detection Model")
+        print(" Loaded CNN Accident Detection Model")
     except Exception as e:
-        print("⚠️ Could not load CNN model:", e)
+        print(" Could not load CNN model:", e)
 else:
-    print("⚠️ CNN model not found, skipping emergency detection model load.")
+    print(" CNN model not found, skipping emergency detection model load.")
 
 
 #  FastAPI Configuration
 
 app = FastAPI(
     title="AI-Driven Smart City Management System",
-    description="🚦 Predict Traffic • 🌫️ Forecast AQI • ⚡ Optimize Energy • 🚨 Detect Accidents",
+    description=" Predict Traffic •  Forecast AQI •  Optimize Energy •  Detect Accidents",
     version="2.0"
 )
 
@@ -81,7 +78,7 @@ class EnergyInput(BaseModel):
 
 @app.get("/")
 def home():
-    return {"message": "🚀 Smart City AI System is Running Successfully!"}
+    return {"message": " Smart City AI System is Running Successfully!"}
 
 #TRAFFIC
 @app.post("/predict_traffic")
