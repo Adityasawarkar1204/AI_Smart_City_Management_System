@@ -1,5 +1,14 @@
-# Large files to ignore
+# Ignore large datasets
+data/**/*.csv
+data/**/*.txt
+cleaned/**/*.csv
 models/*.pkl
 models/*.h5
+
+# Ignore training images
 data/**/*.jpg
 data/**/*.png
+
+# Environment folders
+env/
+__pycache__/
