@@ -1,14 +1,68 @@
-# Ignore large datasets
+# ===============================
+# 🚀 AI Smart City Project – .gitignore
+# Author: Aditya Sawarkar
+# ===============================
+
+# --- Python ---
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.log
+*.swp
+*.swo
+*.bak
+*.tmp
+
+# --- Virtual Environment ---
+env/
+venv/
+.venv/
+ENV/
+env.bak/
+env.bak
+
+# --- IDE / Editor ---
+.vscode/
+.idea/
+*.code-workspace
+
+# --- Large Data Files (not to push on GitHub) ---
+# Datasets
 data/**/*.csv
 data/**/*.txt
+data/**/*.zip
+data/**/*.json
+data/**/*.xlsx
 cleaned/**/*.csv
+outputs/**/*.csv
+*.csv
+*.txt
+
+# --- Image / Video Datasets ---
+data/**/*.jpg
+data/**/*.jpeg
+data/**/*.png
+data/**/*.mp4
+data/**/*.avi
+data/**/*.gif
+data/**/*.webp
+data/**/*.bmp
+
+# --- Trained Models / Checkpoints ---
 models/*.pkl
 models/*.h5
+models/*.joblib
+models/*.pt
+models/*.pth
+models/*.onnx
+*.pkl
+*.h5
 
-# Ignore training images
-data/**/*.jpg
-data/**/*.png
+# --- System / OS Files ---
+.DS_Store
+Thumbs.db
+desktop.ini
 
-# Environment folders
-env/
-__pycache__/
+# --- Notebooks Checkpoints ---
+.ipynb_checkpoints/
