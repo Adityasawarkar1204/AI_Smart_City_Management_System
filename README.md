@@ -1,3 +1,4 @@
+<<<<<<< HEAD
  #  AI-Driven Smart City Management System  
 ### *(Data Science + AI + FastAPI Integration)*  
 
@@ -178,3 +179,7 @@ Real-time IoT data streaming
 Automated alerts for high-risk zones
 
 LSTM-based time-series forecasting
+=======
+# AI_Smart_City_Management_System
+AI-driven system for predicting traffic, air quality, energy usage, and accident detection using ML &amp; CNN models
+>>>>>>> fcedd569a50fc2249aeb987c75db944227702b1d
