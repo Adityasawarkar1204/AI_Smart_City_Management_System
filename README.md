@@ -1,4 +1,3 @@
-<<<<<<< HEAD
  #  AI-Driven Smart City Management System  
 ### *(Data Science + AI + FastAPI Integration)*  
 
